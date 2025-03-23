@@ -10,8 +10,7 @@ on:
 
 jobs:
   ci_debugger:
-    runs-on:
-      - self-hosted
+    runs-on: ARM64
 
     steps:
       - name: Template
