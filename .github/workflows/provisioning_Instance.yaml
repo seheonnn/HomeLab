@@ -16,10 +16,9 @@ jobs:
       - name: Template
         run: |
           echo "Hello, world!" > hello.txt
-          echo "Hello, world!"
+          dpkg --print-architecture >> hello.txt
           echo "This is a device running on ${{ runner.os }}"
-          echo "This device's architecture is ${{ dpkg --print-architecture }}"
-
+          
       - name: Checkout
         uses: actions/checkout@v4
 
