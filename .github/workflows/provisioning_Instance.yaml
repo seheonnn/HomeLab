@@ -10,15 +10,16 @@ on:
 
 jobs:
   ci_debugger:
-    runs-on:
-      - ARM64
+    runs-on: self-hosted
 
     steps:
       - name: Template
         run: |
+          echo "Hello, world!" > hello.txt
           echo "Hello, world!"
           echo "This is a device running on ${{ runner.os }}"
           echo "This device's architecture is ${{ dpkg --print-architecture }}"
 
       - name: Checkout
         uses: actions/checkout@v4
+
